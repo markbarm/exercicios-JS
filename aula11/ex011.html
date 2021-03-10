@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais de Residência</title>
+</head>
+<body>
+    <h1>Pais de residência</h1>
+    Em que pais você mora? <input type="text" name="txtcountry" id="txtcountry">
+    <input type="button" value="Pais" onclick="testar()">
+    <div id="res">
+    </div>
+    <script>
+        function testar(){
+            var txtcountry = window.document.querySelector('input#txtcountry')
+            var country = String(txtcountry.value)
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `<p>Vivendo em ${country}</p>`
+            if (country == 'Brasil'){
+                res.innerHTML += '<p>Você é Brasileiro</p>'
+            } else {
+                res.innerHTML += '<p>Você é Estrangeiro</p>'
+            }
+        }
+    </script>
+</body>
+</html>
