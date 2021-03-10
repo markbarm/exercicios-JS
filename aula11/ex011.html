@@ -15,7 +15,7 @@
     <script>
         function testar(){
             var txtcountry = window.document.querySelector('input#txtcountry')
-            var country = String(txtcountry.value)
+            var country = txtcountry.value
             var res = window.document.querySelector('div#res')
             res.innerHTML = `<p>Vivendo em ${country}</p>`
             if (country == 'Brasil'){
